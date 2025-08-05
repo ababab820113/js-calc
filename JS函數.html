@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>標準展示頁面</title>
+	<link rel="stylesheet" href="../css/main.css">
+	<!-- link的路徑是CSS的 -->
+</head>
+
+<body>
+	<h1>JS函數實作</h1>
+
+	<div class="container">
+				<div class="box" style="width: 300px;">
+
+			<div class="row">
+				<div class="context">房貸本息平均攤還</div>
+			</div>
+			<div class="row">
+				<label for="tpp" class="f-label">本金</label>
+				<input type="number" class="f-control" id="tpp" placeholder="請輸入本金">
+			</div>
+						<div class="row">
+				<label for="trr" class="f-label">年利率</label>
+				<input type="number" class="f-control" id="trr" placeholder="請輸入年利率">
+			</div>
+						<div class="row">
+				<label for="tnn" class="f-label">年數</label>
+				<input type="number" class="f-control" id="tnn" placeholder="請輸入年數">
+			</div>
+			<div class="row">
+				<button class="btn" onclick="bEpp()">試算</button>
+				<div class="row">
+					<div class="context" id="rEpp "></div>
+				</div>
+			</div>
+		</div>
+
+				<div class="box" style="width: 300px;">
+
+			<div class="row">
+				<div class="context">判斷是否閏年</div>
+			</div>
+			<div class="row">
+				<label for="tyy" class="f-label">公元年</label>
+				<input type="number" class="f-control" id="tyy" placeholder="請輸入公元年">
+			</div>
+			<div class="row">
+				<button class="btn" onclick="isLeapYear1()">判斷</button>
+				<div class="row">
+					<div class="context" id="rIsLeap"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="box" style="width: 300px;">
+
+			<div class="row">
+				<div class="context">華氏攝氏轉換</div>
+			</div>
+			<div class="row">
+				<label for="tcc" class="f-label">攝氏</label>
+				<input type="number" class="f-control" id="tcc" placeholder="請輸入攝氏溫度" onkeyup="bC2F()">
+			</div>
+			<div class="row">
+				<label for="tff" class="f-label">華氏</label>
+				<input type="number" class="f-control" id="tff" placeholder="請輸入華氏溫度" onkeyup="bF2C()">
+			</div>
+			<div class="row">
+				<button class="btn" onclick="bC2F()">C to F</button>
+				<button class="btn" onclick="bF2C()">F to C</button>
+				<div class="row">
+					<div class="context" id="rBmi"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="box" style="width: 300px;">
+			<div class="row">
+				<div class="context">計算BMI</div>
+			</div>
+			<div class="row">
+				<label for="thh" class="f-label">身高(公尺)</label>
+				<input type="number" class="f-control" id="thh" placeholder="請輸入身高">
+			</div>
+			<div class="row">
+				<label for="tww" class="f-label">體重(公斤)</label>
+				<!-- for="tww"是為了滑鼠按下去之後能跳到框框，是html5才有的功能 -->
+				<input type="number" class="f-control" id="tww" placeholder="請輸入體重">
+			</div>
+			<div class="row">
+				<button class="btn" onclick="bcalcBmi()">計算</button>
+				<!-- onclick="calcBmi()" 當按這個按鈕的時候 呼叫function -->
+				<div class="row">
+					<div class="context" id="rBmi"></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<script src="main.js"></script>
+	<!-- script的路徑才是js檔案的 -->
+</body>
+
+</html>
