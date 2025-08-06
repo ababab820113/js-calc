@@ -93,6 +93,61 @@ function funEPP(p, r, ny) {
 	return +epp.toFixed(0);
 }
 
+//*************************************************************
+
+let weeks= ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+
+function getTimeStr() {
+  let now = new Date();                // 取得現在時間
+  let y = now.getFullYear();          // 年
+  let M = now.getMonth() + 1;         // 月（從0開始，要+1）
+  let d = now.getDate();              // 日
+  let h = String(now.getHours()).padStart(2, '0');    // 小時（補0）
+  let m = String(now.getMinutes()).padStart(2, '0');  // 分（補0）
+  let s = String(now.getSeconds()).padStart(2, '0');  // 秒（補0）
+  let w = weeks[now.getDay()];        // 星期（日=0, 一=1...）
+  let str = `${y}/${M}/${d} ${w} ${h}:${m}:${s}`;      // 組合成時間字串
+  return str;
+}
+
+//秀出時間
+function showStr(str) {
+  document.getElementById('tt').textContent = str;
+}
+
+//直接執行，但有小問題:如果程式碼很大，畫面上的HYML還沒下載完畢，可能會有錯誤
+//目前寫到這裡秒數只會跑一次，還沒有開始寫連續動的，要重新整理才會變秒數
+//showTime(getTimeStr());
+
+
+//現在要開始讓秒數動起來(把showTime(getTimeStr());包起來)
+
+function showTimeStr() {
+  showStr(getTimeStr());
+}
+
+showTimeStr();
+
+//寫到這裡可以讓秒數連續跑
+// setInterval(showTimeStr,1000);
+
+showStr('請開始');
+
+//一樣用function套起來
+let sid = null; //讓Start做一個保護措施，重新按開始按鈕就不會有bug
+function start(){
+  if (sid){
+    return;
+  }
+  sid = setInterval(showTimeStr,1000);
+  showTimeStr();
+}
+
+function stop(){
+  clearInterval(sid);
+  sid = null 
+  showStr('請開始');
+}
 
 
 
