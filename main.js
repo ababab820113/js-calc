@@ -7,7 +7,7 @@ function bcalcBmi() {     //為了跟按鈕綁在一起的function
 	let vhh = document.getElementById('thh').value; //把物件(id))抓出來,id不能重複
 	let vww = document.getElementById('tww').value;
 	let bmi = calcBmi(vww,vhh);
-	document.getElementById('rBmi').textContent = `BMI值為: ${bmi}`;
+	document.getElementById('rBmi').textContent = `BMI值為: ${bmi} (${category})`;
 }
 
 //只負責計算的function
@@ -158,6 +158,7 @@ function stop(){
   sid = null 
   showStr('請開始');
 }
+
 
 
 
