@@ -4,42 +4,39 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Abbis's js練習</title>
+	<title>Abbis's JS練習</title>
 	<link rel="stylesheet" href="wehelp.css">
 	<!-- link的路徑是CSS的 -->
 
-<style>
-.footer {
-  width:100%;
-  background:#fbf2f2;
-  text-align:center;
-  padding:12px 16px;
-}
-</style>
-	
+	<style>
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		.footer {
+			width: 100%;
+			background: #eec9c9;
+			text-align: center;
+			padding: 12px 16px;
+			margin-top: 100px
+		}
+	</style>
+
 </head>
 
 <body>
-	
-	<h1>JS小時鐘</h1>
-
-	<div class="container">
-		<div class="box1" style="width: 1500px;　height: 300px;">
-			<div class="row" style="text-align: center;">
-				<div class="context">現在時間</div>
-			</div>
-			<div class="row">
-				<div class="context" id="tt" style="text-align:center; font-size: 3rem;">小時鐘</div>
-			</div>
-			<div class="row" style="display: flex;justify-content: space-evenly">
-				<button class="btn" style="margin-right: 5rem;" onclick="start() ">開始</button>
-				<button class="btn" onclick="stop()">停止</button>
-			</div>
-		</div>
+	<div style="background-color:#eec9c9; text-align: center; height:200px;line-height:200px;">
+		<h1 style="color:#5a2c2c; "  >Abbis's JavaScript練習</h1>
 	</div>
-
 	
+
+
+<div style="margin-top: 100px;">
 	<h1>JS計算小程式</h1>
+</div>
+
 
 	<div class="container">
 		<div class="box" style="width: 300px;">
@@ -122,6 +119,28 @@
 		</div>
 	</div>
 
+	<div style="margin-top: 100px;">
+		<h1>JS小時鐘</h1>
+	</div>
+	
+	
+	<div class="container">
+		<div class="box1" style="width: 1680px; height: 300px; ">
+			<div class="row" style="text-align: center;">
+				<div class="context">現在時間</div>
+			</div>
+			<div class="row">
+				<div class="context" id="tt" style="text-align:center; font-size: 3rem;">小時鐘</div>
+			</div>
+			<div class="row" style="display: flex;justify-content: space-evenly">
+				<button class="btn" style="margin-right: 5rem;" onclick="start() ">開始</button>
+				<button class="btn" onclick="stop()">停止</button>
+			</div>
+		</div>
+	</div>
+	
+
+
 	<footer class="footer"> © 2025 Abbie. All rights reserved.</footer>
 
 
@@ -131,14 +150,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
