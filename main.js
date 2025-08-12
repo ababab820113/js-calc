@@ -13,6 +13,7 @@ function bcalcBmi() {     //為了跟按鈕綁在一起的function
 //只負責計算的function
 
 function calcBmi(w, h) {
+	h = h / 100;
 	let BMI = w / (h ** 2);
 	return BMI.toFixed(1);
 }
@@ -148,6 +149,7 @@ function stop(){
   sid = null 
   showStr('請開始');
 }
+
 
 
 
