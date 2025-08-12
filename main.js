@@ -18,6 +18,15 @@ function calcBmi(w, h) {
 	return BMI.toFixed(1);
 }
 
+// BMI 分類
+function getBmiCategory(bmi) {
+    bmi = parseFloat(bmi);
+    if (bmi < 18.5) return "過輕";
+    if (bmi < 24) return "正常";
+    if (bmi < 27) return "過重";
+    return "肥胖";
+}
+
 
 // C/F轉換******************************************
 
@@ -149,6 +158,7 @@ function stop(){
   sid = null 
   showStr('請開始');
 }
+
 
 
 
