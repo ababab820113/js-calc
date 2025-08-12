@@ -7,6 +7,7 @@ function bcalcBmi() {     //為了跟按鈕綁在一起的function
 	let vhh = document.getElementById('thh').value; //把物件(id))抓出來,id不能重複
 	let vww = document.getElementById('tww').value;
 	let bmi = calcBmi(vww,vhh);
+	let category = getBmiCategory(bmi); // 取得分類
 	document.getElementById('rBmi').textContent = `BMI值為: ${bmi} (${category})`;
 }
 
@@ -24,7 +25,7 @@ function getBmiCategory(bmi) {
     if (bmi < 18.5) return "過輕";
     if (bmi < 24) return "正常";
     if (bmi < 27) return "過重";
-    if (bmi < 28)return "肥胖";
+    return "肥胖"; 
 }
 
 
@@ -158,6 +159,7 @@ function stop(){
   sid = null 
   showStr('請開始');
 }
+
 
 
 
