@@ -5,6 +5,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Abbis's JS練習</title>
+	
+	
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"> -->
+
+
 	<link rel="stylesheet" href="wehelp.css">
 	<!-- link的路徑是CSS的 -->
 
@@ -28,91 +34,92 @@
 
 <body>
 	<div style="background-color:#eec9c9; text-align: center; height:200px;line-height:200px;">
-		<h1 style="color:#5a2c2c; "  >Abbis's JavaScript練習</h1>
+		<p style="color:#5a2c2c; font-size: 2.5rem; font-weight: 700; ">Abbis's JavaScript練習</p>
 	</div>
-	
 
 
-<div style="margin-top: 100px;">
-	<h1>JS計算小程式</h1>
-</div>
+
+	<div style="margin-top: 100px;">
+		<h1>JS計算小程式</h1>
+	</div>
 
 
-	<div class="container">
-		<div class="box" style="width: 300px;">
+	<div class="my-container">
+		<div class="box">
 
-			<div class="row">
+			<div class="my-row">
 				<div class="context">房貸本息平均攤還</div>
 			</div>
-			<div class="row">
-				<label for="tpp" class="f-label">本金</label>
-				<input type="number" class="f-control" id="tpp" placeholder="請輸入本金">
+			<div class="my-row">
+				<label for="tpp" class="f-label">貸款金額(萬元)</label>
+				<input type="number" class="f-control" id="tpp" placeholder="請輸入萬元" >
+
 			</div>
-			<div class="row">
-				<label for="trr" class="f-label">年利率</label>
-				<input type="number" class="f-control" id="trr" placeholder="請輸入年利率">
+			<div class="my-row">
+				<label for="trr" class="f-label">年利率(百分比%)</label>
+				<input type="number" class="f-control" id="trr" placeholder="請輸入年利率百分比%">
 			</div>
-			<div class="row">
-				<label for="tnn" class="f-label">年數</label>
-				<input type="number" class="f-control" id="tnn" placeholder="請輸入年數">
+			<div class="my-row">
+				<label for="tnn" class="f-label">貸款年數</label>
+				<input type="number" class="f-control" id="tnn" placeholder="請輸入貸款年數">
 			</div>
-			<div class="row">
+			<div class="my-row">
 				<button class="btn" onclick="bEpp()">試算</button>
-				<div class="row">
+				<div class="my-row">
 					<div class="context" id="rEpp"></div>
 				</div>
 			</div>
 		</div>
 
-		<div class="box" style="width: 300px;">
+		<div class="box">
 
-			<div class="row">
+			<div class="my-row">
 				<div class="context">判斷是否閏年</div>
 			</div>
-			<div class="row">
+			<div class="my-row">
 				<label for="tyy" class="f-label">公元年</label>
 				<input type="number" class="f-control" id="tyy" placeholder="請輸入公元年">
 			</div>
-			<div class="row">
+			<div class="my-row">
 				<button class="btn" onclick="isLeapYear1()">判斷</button>
-				<div class="row">
+				<div class="my-row">
 					<div class="context" id="rIsLeap"></div>
 				</div>
 			</div>
 		</div>
 
-		<div class="box" style="width: 300px;">
+		<div class="box">
 
-			<div class="row">
+			<div class="my-row">
 				<div class="context">華氏攝氏轉換</div>
 			</div>
-			<div class="row">
-				<label for="tcc" class="f-label">攝氏</label>
+			<div class="my-row">
+				<label for="tcc" class="f-label">攝氏°C</label>
 				<input type="number" class="f-control" id="tcc" placeholder="請輸入攝氏溫度" onkeyup="bC2F()">
 			</div>
-			<div class="row">
-				<label for="tff" class="f-label">華氏</label>
+			<div class="my-row">
+				<label for="tff" class="f-label">華氏℉</label>
 				<input type="number" class="f-control" id="tff" placeholder="請輸入華氏溫度" onkeyup="bF2C()">
 			</div>
 		</div>
 
-		<div class="box" style="width: 300px;">
-			<div class="row">
+		<div class="box">
+			<div class="my-row">
 				<div class="context">計算BMI</div>
 			</div>
-			<div class="row">
+			<div class="my-row">
 				<label for="thh" class="f-label">身高(公分)</label>
 				<input type="number" class="f-control" id="thh" placeholder="請輸入身高">
 			</div>
-			<div class="row">
+			<div class="my-row">
 				<label for="tww" class="f-label">體重(公斤)</label>
 				<!-- for="tww"是為了滑鼠按下去之後能跳到框框，是html5才有的功能 -->
 				<input type="number" class="f-control" id="tww" placeholder="請輸入體重">
 			</div>
-			<div class="row">
+			<div class="my-row">
 				<button type="button" class="btn" onclick="bcalcBmi()">計算</button>
 				<!-- onclick="calcBmi()" 當按這個按鈕的時候 呼叫function -->
-				<div class="row">
+				<div class="my-row">
 					<div class="context" id="rBmi"></div>
 				</div>
 			</div>
@@ -122,23 +129,23 @@
 	<div style="margin-top: 100px;">
 		<h1>JS小時鐘</h1>
 	</div>
-	
-	
-	<div class="container">
+
+
+	<div class="my-container">
 		<div class="box1" style="width: 1680px; height: 300px; ">
-			<div class="row" style="text-align: center;">
+			<div class="my-row" style="text-align: center;">
 				<div class="context">現在時間</div>
 			</div>
-			<div class="row">
+			<div class="my-row">
 				<div class="context" id="tt" style="text-align:center; font-size: 3rem;">小時鐘</div>
 			</div>
-			<div class="row" style="display: flex;justify-content: space-evenly">
+			<div class="my-row" style="display: flex;justify-content: space-evenly">
 				<button class="btn" style="margin-right: 5rem;" onclick="start() ">開始</button>
 				<button class="btn" onclick="stop()">停止</button>
 			</div>
 		</div>
 	</div>
-	
+
 
 
 	<footer class="footer"> © 2025 Abbie. All rights reserved.</footer>
